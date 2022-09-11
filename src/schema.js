@@ -1,4 +1,5 @@
 const { gql } = require('apollo-server-micro');
+const { getBookmarks, setBookmarks } = require('./bookmarks');
 
 const wait = numMs => new Promise(res => setTimeout(() => res(), numMs));
 
