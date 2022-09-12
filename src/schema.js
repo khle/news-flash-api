@@ -1,5 +1,6 @@
 const { gql } = require('apollo-server-micro');
 const { getBookmarks, setBookmarks } = require('./bookmarks');
+const { nanoid } = require('nanoid');
 
 const wait = numMs => new Promise(res => setTimeout(() => res(), numMs));
 

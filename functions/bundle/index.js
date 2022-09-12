@@ -1,10 +1,8 @@
 const cors = require('micro-cors')();
-const { createLambdaServer, createLocalServer } = require('./server');
+const { createLocalServer } = require('./server');
 const { send } = require('micro');
-const { nanoid } = require('nanoid');
-const { getBookmarks, setBookmarks } = require('./bookmarks');
 const { typeDefs, resolvers } = require('./schema');
-const { getCollection, initDB, getDB } = require('lokijs-promise');
+const { initDB } = require('lokijs-promise');
 
 // Always run this at the start/top of your app to instantiate the DB
 // A file called v1.json will be created in your project repo and will be used as the DB,
