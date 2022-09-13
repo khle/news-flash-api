@@ -4,7 +4,7 @@ let db = undefined;
 
 function createDB() {
   if (!db) {
-    db = new JsonDB(new Config('data.json', true, false, '/'));
+    db = new JsonDB(new Config('db.json', true, false, '/'));
   }
   return db;
 }
