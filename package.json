@@ -19,7 +19,8 @@
     "lokijs-promise": "^1.0.4",
     "micro": "^9.3.4",
     "micro-cors": "^0.1.1",
-    "nanoid": "^3.1.25"
+    "nanoid": "^3.1.25",
+    "node-json-db": "^2.1.2"
   },
   "devDependencies": {
     "cpx": "^1.5.0",
