@@ -692,11 +692,6 @@
   "resolved" "https://registry.npmjs.org/binary-extensions/-/binary-extensions-2.2.0.tgz"
   "version" "2.2.0"
 
-"bluebird@3.5.1":
-  "integrity" "sha512-MKiLiV+I1AA596t9w1sQJ8jkiSr5+ZKi0WKrYGUn6d1Fx+Ij4tIj+m2WMQSGczs5jZVxV339chE8iwk6F64wjA=="
-  "resolved" "https://registry.npmjs.org/bluebird/-/bluebird-3.5.1.tgz"
-  "version" "3.5.1"
-
 "body-parser@^1.19.0", "body-parser@1.19.0":
   "integrity" "sha512-dhEPs72UPbDnAQJ9ZKMNTP6ptJaionhP5cBb541nXPlW60Jepo9RV/a4fX4XWW9CuFNK22krhrj1+rgzifNCsw=="
   "resolved" "https://registry.npmjs.org/body-parser/-/body-parser-1.19.0.tgz"
@@ -2221,28 +2216,17 @@
   "resolved" "https://registry.npmjs.org/loglevel/-/loglevel-1.7.1.tgz"
   "version" "1.7.1"
 
-"lokijs-promise@^1.0.4":
-  "integrity" "sha512-c2nyZLw0AkVtYQVKtq2dh1DbUijEw88hMXFh85SOcyViNFUUXO9djS6HrI0CTHIPwapP/zCBv32pq0j1IVkB8g=="
-  "resolved" "https://registry.npmjs.org/lokijs-promise/-/lokijs-promise-1.0.4.tgz"
-  "version" "1.0.4"
-  dependencies:
-    "bluebird" "3.5.1"
-    "lokijs" "1.5.5"
-
-"lokijs@^1.5.12":
-  "integrity" "sha512-Q5ALD6JiS6xAUWCwX3taQmgwxyveCtIIuL08+ml0nHwT3k0S/GIFJN+Hd38b1qYIMaE5X++iqsqWVksz7SYW+Q=="
-  "resolved" "https://registry.npmjs.org/lokijs/-/lokijs-1.5.12.tgz"
-  "version" "1.5.12"
-
-"lokijs@1.5.5":
-  "integrity" "sha512-ZTtuyUBxSqkEmgIgEgfxBTnW2UxQsdh1Tm1b4QxKjm86bsDQJSN1AWZ+awspdjC7RWjwjbfI9LNL1NmtTJkVyA=="
-  "resolved" "https://registry.npmjs.org/lokijs/-/lokijs-1.5.5.tgz"
-  "version" "1.5.5"
-
 "long@^4.0.0":
   "integrity" "sha512-XsP+KhQif4bjX1kbuSiySJFNAehNxgLb6hPRGJ9QsUr8ajHkuXGdrHmFUTUUXhDwVX2R5bY4JNZEwbUiMhV+MA=="
   "resolved" "https://registry.npmjs.org/long/-/long-4.0.0.tgz"
   "version" "4.0.0"
+
+"lowdb@^3.0.0":
+  "integrity" "sha512-9KZRulmIcU8fZuWiaM0d5e2/nPnrFyXkeXVpqT+MJS+vgbgOf1EbtvgQmba8HwUFgDl1oeZR6XqEJnkJmQdKmg=="
+  "resolved" "https://registry.npmjs.org/lowdb/-/lowdb-3.0.0.tgz"
+  "version" "3.0.0"
+  dependencies:
+    "steno" "^2.1.0"
 
 "lru-cache@^6.0.0":
   "integrity" "sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA=="
@@ -3089,6 +3073,11 @@
   "integrity" "sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow="
   "resolved" "https://registry.npmjs.org/statuses/-/statuses-1.5.0.tgz"
   "version" "1.5.0"
+
+"steno@^2.1.0":
+  "integrity" "sha512-mauOsiaqTNGFkWqIfwcm3y/fq+qKKaIWf1vf3ocOuTdco9XoHCO2AGF1gFYXuZFSWuP38Q8LBHBGJv2KnJSXyA=="
+  "resolved" "https://registry.npmjs.org/steno/-/steno-2.1.0.tgz"
+  "version" "2.1.0"
 
 "string_decoder@~1.1.1":
   "integrity" "sha512-n/ShnvDi6FHbbVfviro+WojiFzv+s8MPMHBczVePfUpDJLwoLT0ht1l4YwBCbi8pJAveEEdnkHyPyTP/mzRfwg=="

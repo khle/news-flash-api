@@ -5,6 +5,9 @@ const { typeDefs, resolvers } = require('./schema');
 const { createDB } = require('./database');
 
 const db = createDB();
+db.delete('/bookmarks');
+
+//db.get('bookmarks').remove().write();
 
 const apolloServer = createLocalServer({ typeDefs, resolvers });
 

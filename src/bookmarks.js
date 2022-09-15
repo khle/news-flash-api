@@ -2,8 +2,12 @@ const { createDB } = require('./database');
 
 const getBookmarks = async () => {
   const db = createDB();
-  const bookmarks = await db.getData('/bookmarks');
-  return bookmarks;
+  try {
+    const bookmarks = await db.getData('/bookmarks');
+    return bookmarks;
+  } catch {
+    return [];
+  }
 };
 
 const setBookmarks = async bookmarks => {

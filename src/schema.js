@@ -105,10 +105,13 @@ const resolvers = {
         const storyToAdd = stories.find(story => story.id === args.storyId);
         if (storyToAdd) {
           const bookmark = { id: nanoid(), story: storyToAdd };
-          setBookmarks([...bookmarks, bookmark]);
+          bookmarks.push(bookmark);
+
+          setBookmarks(bookmarks);
           return bookmark;
         }
       }
+
       return null;
     },
     async removeBookmark(parent, args) {
@@ -119,10 +122,7 @@ const resolvers = {
       );
 
       if (bookmarkToRemove) {
-        const storeBookmarks = await getBookmarks();
-        const newBookmarks = storeBookmarks.filter(
-          b => b.id !== args.bookmarkId,
-        );
+        const newBookmarks = bookmarks.filter(b => b.id !== args.bookmarkId);
         setBookmarks(newBookmarks);
         return true;
       }
