@@ -2,12 +2,12 @@ const cors = require('micro-cors')();
 const { createLocalServer } = require('./server');
 const { send } = require('micro');
 const { typeDefs, resolvers } = require('./schema');
-const { initDB } = require('lokijs-promise');
+const { createDB } = require('./database');
 
-// Always run this at the start/top of your app to instantiate the DB
-// A file called v1.json will be created in your project repo and will be used as the DB,
-//and it will have an autosave interval of 1000ms (1 second, essentially)
-initDB('v1.json', 1000);
+const db = createDB();
+db.delete('/bookmarks');
+
+//db.get('bookmarks').remove().write();
 
 const apolloServer = createLocalServer({ typeDefs, resolvers });
 

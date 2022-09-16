@@ -1,14 +1,18 @@
-const { getCollection, initDB, getDB } = require('lokijs-promise');
+const { createDB } = require('./database');
 
 const getBookmarks = async () => {
-  const bookmarkCollection = await getCollection('bookmarks');
-  result = bookmarkCollection.find({});
-  return result ? result : [];
+  const db = createDB();
+  try {
+    const bookmarks = await db.getData('/bookmarks');
+    return bookmarks;
+  } catch {
+    return [];
+  }
 };
 
 const setBookmarks = async bookmarks => {
-  const bookmarkCollection = await getCollection('bookmarks');
-  bookmarkCollection.insert(bookmarks);
+  const db = createDB();
+  await db.push('/bookmarks', bookmarks);
 };
 
 module.exports = {
